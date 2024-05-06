@@ -2,6 +2,7 @@ public abstract class Vehicule {
 
     public String model;
     public Float price;
+    public Float priceIncreace;
     public Types type;
 
     public Vehicule(String model, Float price, Types type) {
@@ -33,6 +34,18 @@ public abstract class Vehicule {
     public void setType(Types type) {
         this.type = type;
     }
+
+    public float updatePrice(float percent) {
+        float increace = this.price * (percent / 100);
+        return this.price += increace;
+    }
+
+    /*public void updatePrice(float percent) {
+        float increace = this.price * (percent / 100);
+        this.priceIncreace = this.price + increace;
+    }*/
+
+
 
     @Override
     public String toString() {

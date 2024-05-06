@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +8,7 @@ public class Utilitary extends  Vehicule{
     private Integer maxKm;
     private Integer height;
   // public List<Utilitary> utilitaryList = new ArrayList<>();
-
+  List<Utilitary> utilitaries = new ArrayList<>();
 
     public Utilitary(String model, Float price, Integer maxKm, Integer height) {
         super(model, price, Types.UTILITARY);
@@ -39,11 +41,14 @@ public class Utilitary extends  Vehicule{
         this.height = height;
     }
 
+
     @Override
     public String toString() {
         return  super.toString() + "{" +
-                "maxKm=" + maxKm +
+                " INCREACE " + this.updatePrice(0.25f) +
+                " maxKm= " + maxKm +
                 ", height=" + height +
                 "} ";
     }
+
 }

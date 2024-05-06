@@ -5,7 +5,7 @@ public class Automovile extends Vehicule {
 
     public  Integer airbag;
    // public List<Automovile> automovileList = new ArrayList<>();
-
+   List <Automovile> automoviles = new ArrayList<Automovile>();
     public Automovile(String model, Float price, Integer airbag) {
         super(model, price, Types.AUTOMOVILE);
         this.airbag = airbag;
@@ -20,10 +20,17 @@ public class Automovile extends Vehicule {
         this.airbag = airbag;
     }
 
+
+
     @Override
     public String toString() {
         return "{" + super.toString()+
-                "airbag=" + airbag +
+                " INCREACE " + this.updatePrice(0.05f) +
+                " airbag= " + airbag +
                 "} ";
+
+
     }
+
+
 }

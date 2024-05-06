@@ -20,6 +20,7 @@ public class Carrer extends Automovile implements SportCategory {
         this.maxSpeed = maxSpeed;
     }
 
+
     @Override
     public String toString() {
         return "Carrer{" +

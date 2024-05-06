@@ -16,6 +16,8 @@ public class Main {
         List<Automovile> automoviles = getAutomovile();
         mostrarAutomoviles();
 
+      //  mostrarMotocyclePriceIncrement();
+
 
     }
 
@@ -48,9 +50,19 @@ public class Main {
 
         return motocycles;
     }
-
+    ///Forma reducida de recorrer una lista de objectos
     public static  void mostrarMotocycle (){ getMotocycleList().forEach(System.out::println);}
+    public static  void mostrarMotocyclePriceIncrement (){
 
+        for(Motocycle motocycle : getMotocycleList()){
+            System.out.println("Price:" + motocycle.getPrice() + "Price Increace:" + motocycle.updatePrice(0.2f));
+        }
+        // foreach es un metodo de la interface List
+        getMotocycleList().forEach(motocycle->{
+
+            System.out.println("Price:" + motocycle.getPrice() + "Price Increace:" + motocycle.updatePrice(0.2f));
+        });
+    }
     private static List <Automovile> getAutomovile(){
         List <Automovile> automoviles = new ArrayList<Automovile>();
 
@@ -66,6 +78,7 @@ public class Main {
     }
 
     public static  void mostrarAutomoviles (){ getAutomovile().forEach(System.out::println);}
+
 
 
 }
